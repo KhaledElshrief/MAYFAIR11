@@ -1,0 +1,63 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "packages": "Packages",
+    "blog": "Blog",
+    "contact": "Contact",
+    "signUp": "Sign Up"
+  },
+  "hero": {
+    "title": "Start your unforgettable journey with us.",
+    "subtitle": "Discover the world's most amazing places with exclusive deals",
+    "destination": "Destination",
+    "destinationPlaceholder": "Where are you going?",
+    "checkIn": "Check in",
+    "pickDate": "Pick a date",
+    "guests": "Guests",
+    "oneAdult": "1 Adult",
+    "twoAdults": "2 Adults",
+    "twoAdultsOneChild": "2 Adults, 1 Child",
+    "twoAdultsTwoChildren": "2 Adults, 2 Children",
+    "search": "Search"
+  },
+  "popularDestinations": {
+    "title": "Popular Destinations",
+    "subtitle": "Handpicked destinations across the world, from historical places to natural wonders"
+  },
+  "specialOffers": {
+    "title": "Special Offer",
+    "subtitle": "Check out our special offer with discounts",
+    "days": "days tour",
+    "from": "From",
+    "bookNow": "Book Now"
+  },
+  "blog": {
+    "title": "Our Blog",
+    "readMore": "Read More"
+  },
+  "tripPlanners": {
+    "title": "Trip Planners",
+    "subtitle": "Customized itineraries designed by travel experts",
+    "days": "days"
+  },
+  "gallery": {
+    "title": "Destination Gallery"
+  },
+  "testimonials": {
+    "title": "Traveler's Experiences"
+  },
+  "newsletter": {
+    "title": "Our Newsletter",
+    "subtitle": "Subscribe to our newsletter",
+    "placeholder": "Your email address",
+    "subscribe": "Subscribe"
+  },
+  "footer": {
+    "menu": "Menu",
+    "information": "Information",
+    "contactInfo": "Contact Info",
+    "copyright": "© 2024 Travelian. All rights reserved."
+  }
+}
+

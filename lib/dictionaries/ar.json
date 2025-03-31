@@ -1,0 +1,63 @@
+{
+  "navigation": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "packages": "الباقات",
+    "blog": "المدونة",
+    "contact": "اتصل بنا",
+    "signUp": "تسجيل"
+  },
+  "hero": {
+    "title": "ابدأ رحلتك التي لا تُنسى معنا.",
+    "subtitle": "اكتشف أكثر الأماكن المذهلة في العالم بعروض حصرية",
+    "destination": "الوجهة",
+    "destinationPlaceholder": "إلى أين تذهب؟",
+    "checkIn": "تاريخ الوصول",
+    "pickDate": "اختر تاريخ",
+    "guests": "الضيوف",
+    "oneAdult": "شخص بالغ واحد",
+    "twoAdults": "شخصان بالغان",
+    "twoAdultsOneChild": "شخصان بالغان، طفل واحد",
+    "twoAdultsTwoChildren": "شخصان بالغان، طفلان",
+    "search": "بحث"
+  },
+  "popularDestinations": {
+    "title": "الوجهات الشهيرة",
+    "subtitle": "وجهات مختارة بعناية من جميع أنحاء العالم، من الأماكن التاريخية إلى عجائب الطبيعة"
+  },
+  "specialOffers": {
+    "title": "عروض خاصة",
+    "subtitle": "تحقق من عروضنا الخاصة مع الخصومات",
+    "days": "أيام جولة",
+    "from": "من",
+    "bookNow": "احجز الآن"
+  },
+  "blog": {
+    "title": "مدونتنا",
+    "readMore": "اقرأ المزيد"
+  },
+  "tripPlanners": {
+    "title": "مخططي الرحلات",
+    "subtitle": "مسارات مخصصة صممها خبراء السفر",
+    "days": "أيام"
+  },
+  "gallery": {
+    "title": "معرض الوجهات"
+  },
+  "testimonials": {
+    "title": "تجارب المسافرين"
+  },
+  "newsletter": {
+    "title": "نشرتنا الإخبارية",
+    "subtitle": "اشترك في نشرتنا الإخبارية",
+    "placeholder": "عنوان بريدك الإلكتروني",
+    "subscribe": "اشترك"
+  },
+  "footer": {
+    "menu": "القائمة",
+    "information": "معلومات",
+    "contactInfo": "معلومات الاتصال",
+    "copyright": "© 2024 ترافيليان. جميع الحقوق محفوظة."
+  }
+}
+
