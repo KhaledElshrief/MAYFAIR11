@@ -123,7 +123,7 @@ export default function TripPlanners({ lang, dict }: { lang: string; dict: any }
           <h2 className="text-3xl font-bold">{tripPlannersDict.title}</h2>
           <p className="text-gray-600 mt-2">{tripPlannersDict.subtitle}</p>
         </div>
-        <div className="flex space-x-2">
+        <div className={`flex space-x-2 ${lang === "ar" ? "flex-row-reverse" : ""}`}>
           <Button variant="outline" size="icon" className="rounded-full z-10" ref={swiperPrevRef}>
             <ChevronLeft className="h-4 w-4" />
           </Button>

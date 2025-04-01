@@ -85,14 +85,15 @@ export default function Hero({ lang, dict }: { lang: string; dict: any }) {
             <div className="space-y-2">
               <label className="text-sm font-medium text-gray-700">{hero.guests}</label>
               <div className="relative">
-                <select className="w-full px-3 py-2 border border-gray-300 rounded-md appearance-none">
+                <select className={`w-full px-3 py-2 border border-gray-300 rounded-md ${lang === "ar" ? "pr-8" : ""}`}>
                   <option>{hero.oneAdult}</option>
                   <option>{hero.twoAdults}</option>
                   <option>{hero.twoAdultsOneChild}</option>
                   <option>{hero.twoAdultsTwoChildren}</option>
                 </select>
-                <Users className="absolute right-3 top-2.5 h-4 w-4 text-gray-500" />
-              </div>
+                <Users
+                  className={`absolute top-2.5 h-4 w-4 text-gray-500 ${lang === "ar" ? "right-3" : "left-3"}`}
+                />              </div>
             </div>
 
             <div className="flex items-end">

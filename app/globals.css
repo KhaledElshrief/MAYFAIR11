@@ -107,3 +107,74 @@
   right: auto;
 }
 
+/* Gallery image hover effect */
+.gallery-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.gallery-image-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+.gallery-image-container:hover::after {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.lightbox-container {
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox-content {
+  animation: scaleIn 0.3s ease;
+}
+
+/* Navigation button hover effects */
+.lightbox-nav-button {
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-nav-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Image counter for lightbox */
+.lightbox-counter {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+

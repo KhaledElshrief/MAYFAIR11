@@ -17,8 +17,8 @@ export default function Newsletter({ lang, dict }: { lang: string; dict: any }) 
             <h2 className="text-2xl font-bold">{newsletter.title}</h2>
             <p className="text-gray-600">{newsletter.subtitle}</p>
           </div>
-          <div className="mt-4 md:mt-0 flex w-full md:w-auto">
-            <input
+          <div className={`mt-4 md:mt-0 flex w-full md:w-auto ${lang === "ar" ? "flex-row-reverse" : ""}`}>
+          <input
               type="email"
               placeholder={newsletter.placeholder}
               className="px-4 py-2 border border-gray-300 rounded-l-md w-full md:w-64"

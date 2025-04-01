@@ -41,11 +41,15 @@ export default function Header({ lang, dict }: { lang: string; dict: any }) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className={`hidden md:flex items-center space-x-8 
+            `}>
             <Link href={`/${lang}`} className="text-white hover:text-gray-200">
               {navigation.home}
             </Link>
-            <Link href={`/${lang}/about`} className="text-white hover:text-gray-200">
+                     <Link
+              href={`/${lang}/about`}
+              className={`text-white hover:text-gray-200 ${lang === "ar" ? "pr-4" : ""}`}
+            >
               {navigation.about}
             </Link>
             <Link href={`/${lang}/packages`} className="text-white hover:text-gray-200">

@@ -94,7 +94,7 @@ const offers = [
     days: 6,
     price: 750,
     originalPrice: 900,
-    image: "//images/car-4.png?height=200&width=300",
+    image: "/images/car-4.png?height=200&width=300",
   },
   {
     id: 6,
@@ -125,19 +125,19 @@ export default function CarOffers({ lang, dict }: { lang: string; dict: any }) {
         <h2 className="text-3xl font-bold">{dict.specialOffers.title}</h2>
         <div className="flex items-center gap-4">
           <p className="text-gray-600 hidden md:block">{dict.specialOffers.subtitle}</p>
-          <div className="flex space-x-2">
-            <Button variant="outline" size="icon" className="rounded-full z-10" ref={swiperPrevRef}>
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              className="rounded-full bg-orange-500 text-white hover:bg-orange-600 z-10"
-              ref={swiperNextRef}
-            >
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-          </div>
+                                        <div className={`flex space-x-2 ${lang === "ar" ? "flex-row-reverse" : ""}`}>
+                      <Button variant="outline" size="icon" className="rounded-full z-10" ref={swiperPrevRef}>
+                        <ChevronLeft className="h-4 w-4" />
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="rounded-full bg-orange-500 text-white hover:bg-orange-600 z-10"
+                        ref={swiperNextRef}
+                      >
+                        <ChevronRight className="h-4 w-4" />
+                      </Button>
+                    </div>
         </div>
       </div>
 
