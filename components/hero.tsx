@@ -85,7 +85,7 @@ export default function Hero({ lang, dict }: { lang: string; dict: any }) {
             <div className="space-y-2">
               <label className="text-sm font-medium text-gray-700">{hero.guests}</label>
               <div className="relative">
-                <select className={`w-full px-3 py-2 border border-gray-300 rounded-md ${lang === "ar" ? "pr-8" : ""}`}>
+                <select className={`w-full px-3 py-2 border border-gray-300 rounded-md ${lang === "ar" ? "pr-8" : "pl-8"}`}>
                   <option>{hero.oneAdult}</option>
                   <option>{hero.twoAdults}</option>
                   <option>{hero.twoAdultsOneChild}</option>
