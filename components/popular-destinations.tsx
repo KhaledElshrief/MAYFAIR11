@@ -117,7 +117,7 @@ export default function PopularDestinations({ lang, dict }: { lang: string; dict
         </div>
       </div>
 
-      <Swiper
+           <Swiper
         modules={[Navigation]}
         spaceBetween={24}
         slidesPerView={1}
@@ -126,10 +126,14 @@ export default function PopularDestinations({ lang, dict }: { lang: string; dict
           nextEl: swiperNextRef.current,
         }}
         onBeforeInit={(swiper) => {
-          // @ts-ignore
-          swiper.params.navigation.prevEl = swiperPrevRef.current
-          // @ts-ignore
-          swiper.params.navigation.nextEl = swiperNextRef.current
+          if (swiperPrevRef.current && swiperNextRef.current) {
+            if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
+              swiper.params.navigation.prevEl = swiperPrevRef.current
+              swiper.params.navigation.nextEl = swiperNextRef.current
+              swiper.navigation.init()
+              swiper.navigation.update()
+            }
+          }
         }}
         breakpoints={{
           640: {

@@ -307,7 +307,7 @@ const galleryImages = [
 export default function DestinationGallery({ lang, dict }: { lang: string; dict: any }) {
   const swiperPrevRef = useRef<HTMLButtonElement>(null)
   const swiperNextRef = useRef<HTMLButtonElement>(null)
-  
+
   // State for lightbox
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState<number | null>(null)
@@ -327,22 +327,22 @@ export default function DestinationGallery({ lang, dict }: { lang: string; dict:
   // Function to navigate to previous image
   const goToPreviousImage = () => {
     if (currentImageIndex === null) return
-    
-    const newIndex = currentImageIndex <= 0 
-      ? galleryImages.length - 1 
+
+    const newIndex = currentImageIndex <= 0
+      ? galleryImages.length - 1
       : currentImageIndex - 1
-      
+
     setCurrentImageIndex(newIndex)
   }
 
   // Function to navigate to next image
   const goToNextImage = () => {
     if (currentImageIndex === null) return
-    
-    const newIndex = currentImageIndex >= galleryImages.length - 1 
-      ? 0 
+
+    const newIndex = currentImageIndex >= galleryImages.length - 1
+      ? 0
       : currentImageIndex + 1
-      
+
     setCurrentImageIndex(newIndex)
   }
 
@@ -353,7 +353,7 @@ export default function DestinationGallery({ lang, dict }: { lang: string; dict:
 
   // Get current image data if available
   const currentImage = currentImageIndex !== null ? galleryImages[currentImageIndex] : null
-  
+
   // Check if RTL mode is active
   const isRtl = lang === "ar"
 
@@ -361,7 +361,7 @@ export default function DestinationGallery({ lang, dict }: { lang: string; dict:
     <section className="py-8">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-3xl font-bold">{gallery.title}</h2>
-                <div className={`flex space-x-2 ${lang === "ar" ? "flex-row-reverse" : ""}`}>
+        <div className={`flex space-x-2 ${lang === "ar" ? "flex-row-reverse" : ""}`}>
           <Button variant="outline" size="icon" className="rounded-full z-10" ref={swiperPrevRef}>
             <ChevronLeft className="h-4 w-4" />
           </Button>
@@ -389,10 +389,14 @@ export default function DestinationGallery({ lang, dict }: { lang: string; dict:
             nextEl: swiperNextRef.current,
           }}
           onBeforeInit={(swiper) => {
-            // @ts-ignore
-            swiper.params.navigation.prevEl = swiperPrevRef.current
-            // @ts-ignore
-            swiper.params.navigation.nextEl = swiperNextRef.current
+            if (swiperPrevRef.current && swiperNextRef.current) {
+              if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
+                swiper.params.navigation.prevEl = swiperPrevRef.current
+                swiper.params.navigation.nextEl = swiperNextRef.current
+                swiper.navigation.init()
+                swiper.navigation.update()
+              }
+            }
           }}
           breakpoints={{
             640: {
@@ -407,7 +411,7 @@ export default function DestinationGallery({ lang, dict }: { lang: string; dict:
         >
           {galleryImages.map((image, index) => (
             <SwiperSlide key={image.id}>
-              <div 
+              <div
                 className="relative overflow-hidden rounded-lg aspect-[3/4] group cursor-pointer"
                 onClick={() => openLightbox(index)}
               >
