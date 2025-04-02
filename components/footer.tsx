@@ -117,8 +117,11 @@ export default function Footer({ lang, dict }: { lang: string; dict: any }) {
               <Link href="https://www.instagram.com/mayfair.11/?igshid=YmMyMTA2M2Y%3D" className="text-gray-400 hover:text-white">
                 <FaInstagram size={20} />
               </Link>
-              <Link href="https://x.com/i/flow/login?redirect_after_login=%2Fmayfir11" className="text-gray-400 hover:text-white">
-                <FaTwitter size={20} />
+              <Link
+                href="https://x.com/i/flow/login?redirect_after_login=%2Fmayfir11"
+
+              >
+                <FaTwitter className={`text-gray-400 hover:text-white ${lang === "ar" ? "mr-3" : ""}`} size={20} />
               </Link>
               <Link href="https://wa.me/mayfair11" className="text-gray-400 hover:text-white">
                 <FaWhatsapp size={20} />
