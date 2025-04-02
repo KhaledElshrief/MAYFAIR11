@@ -56,7 +56,7 @@ export default function TravelersExperiences({ lang, dict }: { lang: string; dic
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-sm border">
             <div className="flex items-center mb-4">
-              <Avatar className="h-10 w-10 mr-3">
+                           <Avatar className={`h-10 w-10 ${lang === "ar" ? "ml-3" : "mr-3"}`}>
                 <AvatarImage
                   src={testimonial.avatar}
                   alt={testimonial.name[lang as keyof typeof testimonial.name] || testimonial.name.en}
