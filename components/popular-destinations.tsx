@@ -65,7 +65,7 @@ const destinations = [
       en: "Prague, Czech Republic",
       ar: "براغ، جمهورية التشيك",
     },
-    image: "/placeholder.svg?height=300&width=250",
+    image: "/images/purge.png?height=300&width=250",
   },
   {
     id: 8,
@@ -73,7 +73,7 @@ const destinations = [
       en: "Vienna, Austria",
       ar: "فيينا، النمسا",
     },
-    image: "/placeholder.svg?height=300&width=250",
+    image: "/images/vinna.png?height=300&width=250",
   },
   {
     id: 9,

@@ -50,8 +50,11 @@ export default function Footer({ lang, dict }: { lang: string; dict: any }) {
               />
               <span className="text-3xl font-bold text-white">MAYFAIR11</span>
             </div>
-            <p className="text-gray-400 text-sm">Book your trip in minutes, get full control for much longer.</p>
-          </div>
+            <p className="text-gray-400 text-sm">
+              {lang === "ar"
+                ? "احجز رحلتك في دقائق واحصل على تحكم كامل لفترة أطول."
+                : "Book your trip in minutes, get full control for much longer."}
+            </p>          </div>
 
           <div>
             <h3 className="font-bold text-lg mb-4">{footer.menu}</h3>
