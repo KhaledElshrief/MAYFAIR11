@@ -46,19 +46,19 @@ export default function Header({ lang, dict }: { lang: string; dict: any }) {
             <Link href={`/${lang}`} className="text-white hover:text-gray-200">
               {navigation.home}
             </Link>
-                     <Link
+            <Link
               href={`/${lang}/about`}
-              className={`text-white hover:text-gray-200 ${lang === "ar" ? "pr-4" : ""}`}
+              className={`text-white hover:text-gray-200 pointer-events-none ${lang === "ar" ? "pr-4" : ""}`}
             >
               {navigation.about}
             </Link>
-            <Link href={`/${lang}/packages`} className="text-white hover:text-gray-200">
+            <Link href={`/${lang}/packages`} className="text-white hover:text-gray-200 pointer-events-none">
               {navigation.packages}
             </Link>
-            <Link href={`/${lang}/blog`} className="text-white hover:text-gray-200">
+            <Link href={`/${lang}/blog`} className="text-white hover:text-gray-200 pointer-events-none">
               {navigation.blog}
             </Link>
-            <Link href={`/${lang}/contact`} className="text-white hover:text-gray-200">
+            <Link href={`/${lang}/contact`} className="text-white hover:text-gray-200 pointer-events-none">
               {navigation.contact}
             </Link>
           </nav>
@@ -85,9 +85,7 @@ export default function Header({ lang, dict }: { lang: string; dict: any }) {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Button className="hidden md:inline-flex bg-orange-500 hover:bg-orange-600 text-white">
-              {navigation.signUp}
-            </Button>
+          
           </div>
 
           {/* Mobile Menu Button */}

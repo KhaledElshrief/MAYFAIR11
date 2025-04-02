@@ -8,7 +8,7 @@ const testimonials = [
       en: "Sarah Johnson",
       ar: "سارة جونسون",
     },
-    avatar: "/placeholder.svg?height=50&width=50",
+    avatar: "/images/person-3.png?height=50&width=50",
     rating: 5,
     text: {
       en: "My trip to Italy was absolutely amazing! The itinerary was perfectly planned and the accommodations were fantastic. I'll definitely book with Travelian again.",
@@ -21,7 +21,7 @@ const testimonials = [
       en: "Michael Chen",
       ar: "مايكل تشن",
     },
-    avatar: "/placeholder.svg?height=50&width=50",
+    avatar: "/images/person-2.png?height=50&width=50",
     rating: 5,
     text: {
       en: "The guided tour of Greece exceeded all my expectations. Our guide was knowledgeable and friendly, making the experience truly memorable.",
@@ -31,10 +31,10 @@ const testimonials = [
   {
     id: 3,
     name: {
-      en: "Emma Wilson",
-      ar: "إيما ويلسون",
+      en: "John Doe",
+      ar: "جون دو ",
     },
-    avatar: "/placeholder.svg?height=50&width=50",
+    avatar: "/images/person-1.png?height=50&width=50",
     rating: 5,
     text: {
       en: "From booking to return, everything was seamless. The customer service team was responsive and helpful throughout the entire process.",
