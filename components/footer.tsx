@@ -7,7 +7,7 @@ export default function Footer({ lang, dict }: { lang: string; dict: any }) {
     menu: "Menu",
     information: "Information",
     contactInfo: "Contact Info",
-    copyright: "© 2024 Travelian. All rights reserved.",
+    copyright: "© 2025 MAYFAIR11. All rights reserved.",
   }
 
   // Menu items with translations
