@@ -14,8 +14,8 @@ const offers = [
   {
     id: 1,
     title: {
-      en: "Tesla Model 3",
-      ar: "تسلا موديل 3",
+      en: "Rang Rover",
+      ar: "رانج روفر",
     },
     rating: 4.8,
     reviews: 147,
@@ -24,9 +24,7 @@ const offers = [
       ar: "استمتع بقيادة المستقبل مع هذه السيارة الكهربائية.",
     },
     days: 1, // Rental duration in days
-    price: 120, // Price per day in Euros
-    originalPrice: 150, // Original price per day in Euros
-    image: "/images/car-1.png?height=200&width=300",
+    image: "/images/Rang-rover.jpg?height=200&width=300",
   },
   {
     id: 2,
@@ -41,8 +39,6 @@ const offers = [
       ar: "سيارة دفع رباعي فاخرة مع ميزات متميزة لرحلة مريحة.",
     },
     days: 1,
-    price: 200,
-    originalPrice: 250,
     image: "/images/car-2.png?height=200&width=300",
   },
   {
@@ -58,8 +54,6 @@ const offers = [
       ar: "سيارة سيدان موثوقة وموفرة للوقود للاستخدام اليومي.",
     },
     days: 1,
-    price: 50,
-    originalPrice: 70,
     image: "/images/car-3.png?height=200&width=300",
   },
   {
@@ -75,9 +69,7 @@ const offers = [
       ar: "سيارة سيدان أنيقة وقوية للأعمال أو الترفيه.",
     },
     days: 1,
-    price: 180,
-    originalPrice: 220,
-    image: "/images/car-4.png?height=200&width=300",
+    image: "/images/marceds.jpg?height=200&width=300",
   },
   {
     id: 5,
@@ -92,8 +84,6 @@ const offers = [
       ar: "سيارة رياضية أيقونية بأداء مثير.",
     },
     days: 1,
-    price: 150,
-    originalPrice: 180,
     image: "/images/ford.png?height=200&width=300",
   },
   {
@@ -109,11 +99,25 @@ const offers = [
       ar: "سيارة مدمجة وفعالة للقيادة في المدينة.",
     },
     days: 1,
-    price: 60,
-    originalPrice: 80,
     image: "/images/honda.png?height=200&width=300",
   },
+  {
+    id: 7,
+    title: {
+      en: "Ferrari F8 Tributo",
+      ar: "فيراري F8 تريبوتو",
+    },
+    rating: 5.0,
+    reviews: 250,
+    description: {
+      en: "A high-performance sports car with breathtaking speed and design.",
+      ar: "سيارة رياضية عالية الأداء بسرعات وتصميم مذهل.",
+    },
+    days: 1,
+    image: "/images/ferrari-f8.jpg?height=200&width=300",
+  },
 ]
+
 export default function CarOffers({ lang, dict }: { lang: string; dict: any }) {
   const swiperPrevRef = useRef<HTMLButtonElement>(null)
   const swiperNextRef = useRef<HTMLButtonElement>(null)
@@ -203,11 +207,7 @@ export default function CarOffers({ lang, dict }: { lang: string; dict: any }) {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="flex justify-between items-center p-4 pt-0">
-                <div>
-                  <span className="text-sm text-gray-500 line-through">€{offer.originalPrice}</span>
-                  <p className="text-xl font-bold text-orange-500">€{offer.price}</p>
-                </div>
+              <CardFooter className="flex justify-end items-center p-4 pt-0">
                 <Button className="bg-orange-500 hover:bg-orange-600 text-white">{dict.specialOffers.bookNow}</Button>
               </CardFooter>
             </Card>
@@ -217,4 +217,3 @@ export default function CarOffers({ lang, dict }: { lang: string; dict: any }) {
     </section>
   )
 }
-

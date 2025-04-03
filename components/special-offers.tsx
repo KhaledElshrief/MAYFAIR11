@@ -24,8 +24,6 @@ const offers = [
       ar: "استكشف الشوارع الملونة واستمتع بالمأكولات المحلية",
     },
     days: 7,
-    price: 650,
-    originalPrice: 800,
     image: "/images/Image Container.png?height=200&width=300",
   },
   {
@@ -41,8 +39,6 @@ const offers = [
       ar: "زيارة الآثار القديمة وتجربة ثقافة البحر المتوسط",
     },
     days: 5,
-    price: 600,
-    originalPrice: 800,
     image: "/images/Image Container-2.png?height=200&width=300",
   },
   {
@@ -58,8 +54,6 @@ const offers = [
       ar: "اكتشف المدينة الخالدة بتاريخها الغني",
     },
     days: 6,
-    price: 600,
-    originalPrice: 750,
     image: "/images/Image Container-3.png?height=200&width=300",
   },
   {
@@ -75,8 +69,6 @@ const offers = [
       ar: "تجربة عمارة غاودي وحياة المدينة النابضة بالحياة",
     },
     days: 5,
-    price: 550,
-    originalPrice: 700,
     image: "/images/Image Container.png?height=200&width=300",
   },
   {
@@ -92,8 +84,6 @@ const offers = [
       ar: "استمتع بإطلالات خلابة ومباني بيضاء جميلة",
     },
     days: 6,
-    price: 750,
-    originalPrice: 900,
     image: "/images/Image Container-2.png?height=200&width=300",
   },
   {
@@ -109,8 +99,6 @@ const offers = [
       ar: "استكشف مدينة الحب ومعالمها الشهيرة",
     },
     days: 4,
-    price: 500,
-    originalPrice: 650,
     image: "/images/Image Container-3.png?height=200&width=300",
   },
 ]
@@ -204,11 +192,7 @@ export default function SpecialOffers({ lang, dict }: { lang: string; dict: any 
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="flex justify-between items-center p-4 pt-0">
-                <div>
-                  <span className="text-sm text-gray-500 line-through">€{offer.originalPrice}</span>
-                  <p className="text-xl font-bold text-orange-500">€{offer.price}</p>
-                </div>
+              <CardFooter className="flex justify-end items-center p-4 pt-0">
                 <Button className="bg-orange-500 hover:bg-orange-600 text-white">{dict.specialOffers.bookNow}</Button>
               </CardFooter>
             </Card>
@@ -218,4 +202,3 @@ export default function SpecialOffers({ lang, dict }: { lang: string; dict: any 
     </section>
   )
 }
-

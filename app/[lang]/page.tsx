@@ -11,6 +11,7 @@ import Footer from "@/components/footer"
 import Script from "next/script"
 import { getDictionary } from "@/lib/dictionary"
 import CarOffers from "@/components/car-offers"
+import PricingSection from "@/components/pricing-section"
 
 export default async function Home({
   params: { lang },
@@ -28,6 +29,7 @@ export default async function Home({
         <SpecialOffers lang={lang} dict={dict} />
         <CarOffers lang={lang} dict={dict} />
         <BlogSection lang={lang} dict={dict} />
+        <PricingSection lang={lang} dict={dict} />
         <TripPlanners lang={lang} dict={dict} />
         <DestinationGallery lang={lang} dict={dict} />
         <TravelersExperiences lang={lang} dict={dict} />

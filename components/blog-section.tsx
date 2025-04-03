@@ -6,9 +6,9 @@ export default function BlogSection({ lang, dict }: { lang: string; dict: any })
   const [showMore, setShowMore] = useState(false) // State to toggle additional content
 
   const blog = dict?.blog || {
-    title: "Our Blog",
-    readMore: "Read More",
-    readLess: "Read Less",
+    title: lang === "ar" ? "مدونتنا" : "Our Blog",
+    readMore: lang === "ar" ? "اقرأ المزيد" : "Read More",
+    readLess: lang === "ar" ? "اقرأ أقل" : "Read Less",
   }
 
   const blogContent = {
