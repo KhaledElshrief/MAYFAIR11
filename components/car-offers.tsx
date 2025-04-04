@@ -50,7 +50,7 @@ const offers = [
     rating: 5.0,
     reviews: 250,
     description: {
-      en: "A high-performance sports car with breathtaking speed and design.",
+      en: "A high-performance sports car with breathtaking speed.",
       ar: "سيارة رياضية عالية الأداء بسرعات وتصميم مذهل.",
     },
     days: 1,
