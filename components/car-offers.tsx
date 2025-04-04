@@ -20,53 +20,17 @@ const offers = [
     rating: 4.8,
     reviews: 147,
     description: {
-      en: "Experience the future of driving with this electric car.",
-      ar: "استمتع بقيادة المستقبل مع هذه السيارة الكهربائية.",
+      en: "Luxury SUV with advanced technology and comfort.",
+      ar: "سيارة دفع رباعي فاخرة مع تقنية متقدمة وراحة.",
     },
     days: 1, // Rental duration in days
-    price: 120, // Price per day in Euros
-    originalPrice: 150, // Original price per day in Euros
     image: "/images/Rang-rover.jpg?height=200&width=300",
-  },
-  {
-    id: 2,
-    title: {
-      en: "BMW X5",
-      ar: "بي إم دبليو X5",
-    },
-    rating: 4.9,
-    reviews: 175,
-    description: {
-      en: "Luxury SUV with premium features for a comfortable ride.",
-      ar: "سيارة دفع رباعي فاخرة مع ميزات متميزة لرحلة مريحة.",
-    },
-    days: 1,
-    price: 200,
-    originalPrice: 250,
-    image: "/images/car-2.png?height=200&width=300",
-  },
-  {
-    id: 3,
-    title: {
-      en: "Toyota Corolla",
-      ar: "تويوتا كورولا",
-    },
-    rating: 4.7,
-    reviews: 163,
-    description: {
-      en: "Reliable and fuel-efficient sedan for everyday use.",
-      ar: "سيارة سيدان موثوقة وموفرة للوقود للاستخدام اليومي.",
-    },
-    days: 1,
-    price: 50,
-    originalPrice: 70,
-    image: "/images/car-3.png?height=200&width=300",
   },
   {
     id: 4,
     title: {
-      en: "Mercedes-Benz E-Class",
-      ar: "مرسيدس بنز الفئة E",
+      en: "Mercedes-Benz S-Class",
+      ar: "مرسيدس بنز الفئة S",
     },
     rating: 4.8,
     reviews: 192,
@@ -75,9 +39,22 @@ const offers = [
       ar: "سيارة سيدان أنيقة وقوية للأعمال أو الترفيه.",
     },
     days: 1,
-    price: 180,
-    originalPrice: 220,
     image: "/images/marceds.jpg?height=200&width=300",
+  },
+  {
+    id: 7,
+    title: {
+      en: "Ferrari F8 Tributo",
+      ar: "فيراري F8 تريبوتو",
+    },
+    rating: 5.0,
+    reviews: 250,
+    description: {
+      en: "A high-performance sports car with breathtaking speed and design.",
+      ar: "سيارة رياضية عالية الأداء بسرعات وتصميم مذهل.",
+    },
+    days: 1,
+    image: "/images/ferrari-f8.jpg?height=200&width=300",
   },
   {
     id: 5,
@@ -92,8 +69,6 @@ const offers = [
       ar: "سيارة رياضية أيقونية بأداء مثير.",
     },
     days: 1,
-    price: 150,
-    originalPrice: 180,
     image: "/images/ford.png?height=200&width=300",
   },
   {
@@ -109,28 +84,40 @@ const offers = [
       ar: "سيارة مدمجة وفعالة للقيادة في المدينة.",
     },
     days: 1,
-    price: 60,
-    originalPrice: 80,
     image: "/images/honda.png?height=200&width=300",
   },
   {
-    id: 7,
+    id: 2,
     title: {
-      en: "Ferrari F8 Tributo",
-      ar: "فيراري F8 تريبوتو",
+      en: "BMW X5",
+      ar: "بي إم دبليو X5",
     },
-    rating: 5.0,
-    reviews: 250,
+    rating: 4.9,
+    reviews: 175,
     description: {
-      en: "A high-performance sports car with breathtaking speed and design.",
-      ar: "سيارة رياضية عالية الأداء بسرعات وتصميم مذهل.",
+      en: "Luxury SUV with premium features for a comfortable ride.",
+      ar: "سيارة دفع رباعي فاخرة مع ميزات متميزة لرحلة مريحة.",
     },
     days: 1,
-    price: 500,
-    originalPrice: 600,
-    image: "/images/ferrari-f8.jpg?height=200&width=300",
+    image: "/images/car-2.png?height=200&width=300",
+  },
+  {
+    id: 3,
+    title: {
+      en: "Toyota Corolla",
+      ar: "تويوتا كورولا",
+    },
+    rating: 4.7,
+    reviews: 163,
+    description: {
+      en: "Reliable and fuel-efficient sedan for everyday use.",
+      ar: "سيارة سيدان موثوقة وموفرة للوقود للاستخدام اليومي.",
+    },
+    days: 1,
+    image: "/images/car-3.png?height=200&width=300",
   },
 ]
+
 export default function CarOffers({ lang, dict }: { lang: string; dict: any }) {
   const swiperPrevRef = useRef<HTMLButtonElement>(null)
   const swiperNextRef = useRef<HTMLButtonElement>(null)
@@ -220,11 +207,7 @@ export default function CarOffers({ lang, dict }: { lang: string; dict: any }) {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="flex justify-between items-center p-4 pt-0">
-                <div>
-                  <span className="text-sm text-gray-500 line-through">€{offer.originalPrice}</span>
-                  <p className="text-xl font-bold text-orange-500">€{offer.price}</p>
-                </div>
+              <CardFooter className="flex justify-end items-center p-4 pt-0">
                 <Button className="bg-orange-500 hover:bg-orange-600 text-white">{dict.specialOffers.bookNow}</Button>
               </CardFooter>
             </Card>
@@ -234,4 +217,3 @@ export default function CarOffers({ lang, dict }: { lang: string; dict: any }) {
     </section>
   )
 }
-
